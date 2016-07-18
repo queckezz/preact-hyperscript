@@ -18,17 +18,22 @@ npm install preact-hyperscript
 ## Example
 
 ```js
-const h, { h1, h2, button, ul } = require('preact-hyperscript')
+const h = require('preact-hyperscript')
 const { render } = require('preact')
 
-const App = () => div([
-  h1('.bold', 'create-dom-tree'),
-  h2('#subtitle', 'Create a DOM tree with ease'),
-  button({ href: 'http://ghub.io/create-dom-tree' }, 'Open'),
-  ul(['simple', 'functional', 'fast'].map(key => li(key)))
+const { h1, h2, button, ul } = h
+
+const App = ({ library }) => div([
+  h1('.bold', library),
+  h2('#subtitle', 'Preact is a fast, 3kb alternative to React, with the same ES2015 API'),
+  button({ href: 'http://ghub.io/preact' }, 'Learn More'),
+  ul(['react', 'small', 'es2015'].map(key => li(key)))
 ])
 
-render(h(App), document.body)
+render(
+  h(App, { library: 'Preact' }),
+  document.body
+)
 ```
 
 ## Tests
