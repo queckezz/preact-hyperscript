@@ -7,6 +7,7 @@
     "test:node": "tape test/*.js | tap-spec",
     "test:lint": "snazzy",
     "test": "npm-run-all -p test:*",
+    "prepublish": "mkdirp lib && buble -i src -o lib",
     "release": "xyz"
   },
   "keywords": [
@@ -27,6 +28,7 @@
     "preact": "*"
   },
   "devDependencies": {
+    "mkdirp": "^0.5.1",
     "npm-run-all": "^2.3.0",
     "preact-render-to-string": "^2.6.1",
     "snazzy": "^4.0.0",
