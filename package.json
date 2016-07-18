@@ -1,6 +1,6 @@
 {
   "name": "preact-hyperscript",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Use hyperscript to create preact virtual dom elements",
   "main": "lib/index.js",
   "scripts": {
@@ -28,8 +28,10 @@
     "preact": "*"
   },
   "devDependencies": {
+    "buble": "^0.12.5",
     "mkdirp": "^0.5.1",
     "npm-run-all": "^2.3.0",
+    "preact": "^5.3.1",
     "preact-render-to-string": "^2.6.1",
     "snazzy": "^4.0.0",
     "tap-spec": "^4.1.1",
