@@ -1,6 +1,6 @@
 {
   "name": "preact-hyperscript",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "Use hyperscript to create preact virtual dom elements",
   "main": "lib/index.js",
   "scripts": {
