@@ -1,7 +1,9 @@
 
 const render = require('preact-render-to-string')
 const test = require('tape')
-const h = require('../src')
+const { createComponent, createElement, h1 } = require('../src')
+
+const h = createElement
 
 test('should create nodes', (t) => {
   const node = h('p.test-class', { id: 'some-id' }, 'Hello World!')
@@ -25,13 +27,25 @@ test('multiple children', (t) => {
 })
 
 test('helpers', (t) => {
-  const node = h.h1('test')
+  const node = h1('test')
   t.equal(render(node), '<h1>test</h1>')
   t.end()
 })
 
+test('component shorthand', (t) => {
+  const Component = createComponent((props) => h1(props.text))
+
+  t.equal(
+    render(Component({ text: 'test' })),
+    '<h1>test</h1>',
+    'should render'
+  )
+
+  t.end()
+})
+
 test('components', (t) => {
-  const App = ({ name }) => h.h1(`Hello ${name}`)
+  const App = ({ name }) => h1(`Hello ${name}`)
   const node = h(App, { name: 'Fabian' })
   t.equal(render(node), '<h1>Hello Fabian</h1>')
   t.end()

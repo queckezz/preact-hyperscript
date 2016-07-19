@@ -20,10 +20,10 @@
 <sub>[→ Try this example on Codepen.io!](http://codepen.io/queckezz/pen/XKkEyj?editors=1010)</sub>
 
 ```js
-const h = require('preact-hyperscript')
+const { createElement, div, h1, h2, h3, button, ul, li } = require('preact-hyperscript')
 const { render } = require('preact')
 
-const { div, h1, h2, h3, button, ul, li } = h
+const h = createElement
 
 const App = ({ library }) => div([
   h1('.bold', library),
@@ -40,6 +40,24 @@ render(
 ```
 
 ## Guide
+
+### Component shorthand
+
+Instead of calling `createElement(Component, props)` you can wrap your component into a `createComponent` call and invoke it using `Component(props)` directly:
+
+```js
+const { createComponent, h1 } = require('preact-hyperscript')
+
+const App = createComponent((props) => h1(props.text))
+
+render(
+  // instead of h(App, { text: 'test' }) you can do:
+  App({ text: 'test' }),
+  document.body
+)
+```
+
+### Syntax
 
 Each [element](https://github.com/wooorm/html-tag-names/blob/4604477c3762b7df87536480fb453a9dd7feaaf0/index.json) in the DOM is exposed as a function when requiring `preact-hyperscript`.
 
