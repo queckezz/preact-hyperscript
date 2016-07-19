@@ -8,6 +8,7 @@
     "test:lint": "snazzy",
     "test": "npm-run-all -p test:*",
     "prepublish": "mkdirp lib && buble -i src -o lib",
+    "bench": "node bench/index.js",
     "release": "xyz"
   },
   "keywords": [
@@ -29,6 +30,7 @@
   },
   "devDependencies": {
     "buble": "^0.12.5",
+    "fastbench": "^1.0.1",
     "mkdirp": "^0.5.1",
     "npm-run-all": "^2.3.0",
     "preact": "^5.3.1",

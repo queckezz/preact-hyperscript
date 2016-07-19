@@ -77,6 +77,21 @@ All arguments are **optional** with at least **one argument needing to be presen
 * **attributes** is an object of dom attributes: `{ href: '#header' }`
 * **children** can be a string for a text node or an array of nodes
 
+## Benchmarks
+
+Some basic benchmarks for creating `10^5` nodes:
+
+```bash
+> npm run bench
+```
+
+```
+native*100000: 31.481ms
+hyperscript*100000: 353.746ms
+```
+
+
+
 ## Tests
 
 ```bash
