@@ -60,7 +60,7 @@ test('classnames sugar', (t) => {
 
 test('convert style object to inline style string', (t) => {
   const node = h1({ style: { textDecoration: 'none', clear: 'both' } })
-  
+
   t.equal(
     node.attributes.style,
     'text-decoration:none;clear:both;',
