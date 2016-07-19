@@ -77,6 +77,26 @@ All arguments are **optional** with at least **one argument needing to be presen
 * **attributes** is an object of dom attributes: `{ href: '#header' }`
 * **children** can be a string for a text node or an array of nodes
 
+### Built-in sugar
+
+#### Classes
+
+Conditionally joins class names together. It utilizes JedWatson's awesome [classnames](https://github.com/JedWatson/classnames). Visit the [usage docs](https://github.com/JedWatson/classnames#usage) for more information.
+
+#### Inline styles
+
+Automatically converts style objects to a string. For an additional weight of ~400 bytes this is well worth it:
+
+```js
+const style = {
+  textDecoration: 'underline',
+  fontSize: '56px'
+}
+
+const node = h1({ style }, 'hello!')
+// -> <h1 style='text-decoration:underline;font-size:56px;'>hello!</h1>
+```
+
 ## Benchmarks
 
 Some basic benchmarks for creating `10^5` nodes:
@@ -89,8 +109,6 @@ Some basic benchmarks for creating `10^5` nodes:
 native*100000: 31.481ms
 hyperscript*100000: 114.727ms
 ```
-
-
 
 ## Tests
 
