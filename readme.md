@@ -17,7 +17,7 @@
 
 ## Example
 
-<small>[→ Try this example on Codepen.io!](http://codepen.io/queckezz/pen/XKkEyj?editors=1010)</small>
+<sub>[→ Try this example on Codepen.io!](http://codepen.io/queckezz/pen/XKkEyj?editors=1010)</sub>
 
 ```js
 const h = require('preact-hyperscript')
