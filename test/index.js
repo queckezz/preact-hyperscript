@@ -50,3 +50,22 @@ test('components', (t) => {
   t.equal(render(node), '<h1>Hello Fabian</h1>')
   t.end()
 })
+
+test('classnames sugar', (t) => {
+  const node = h1({ class: { foo: true, bar: false } })
+  t.equal(node.attributes.class, 'foo', 'applies classes')
+  t.pass()
+  t.end()
+})
+
+test('convert style object to inline style string', (t) => {
+  const node = h1({ style: { textDecoration: 'none', clear: 'both' } })
+  
+  t.equal(
+    node.attributes.style,
+    'text-decoration:none;clear:both;',
+    'applies styles as a string'
+  )
+
+  t.end()
+})

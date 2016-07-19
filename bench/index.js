@@ -6,7 +6,7 @@ const { h } = require('preact')
 const run = bench([
   native,
   hyperscript
-], Math.pow(10, 5))
+], Math.pow(10, 3))
 
 function native (done) {
   h('p', { id: 'id', class: 'pad red' }, 'Hello!')
