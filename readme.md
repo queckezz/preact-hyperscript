@@ -87,7 +87,7 @@ Some basic benchmarks for creating `10^5` nodes:
 
 ```
 native*100000: 31.481ms
-hyperscript*100000: 253.318ms
+hyperscript*100000: 114.727ms
 ```
 
 

@@ -14,7 +14,7 @@ Object.keys(helpers).forEach((name) => {
 
 function createElement () {
   const { node, attrs, children } = parse(arguments)
-  return h(node, attrs, ...children)
+  return h(node, attrs, children)
 }
 
 function createComponent (Component) {
