@@ -1,6 +1,6 @@
 {
   "name": "preact-hyperscript",
-  "version": "0.3.1",
+  "version": "0.4.0",
   "description": "Hyperscript-like syntax for creating Preact elements",
   "main": "lib/index.js",
   "scripts": {
