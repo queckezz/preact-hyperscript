@@ -39,6 +39,26 @@ render(
 )
 ```
 
+## Guide
+
+Each [element](https://github.com/wooorm/html-tag-names/blob/4604477c3762b7df87536480fb453a9dd7feaaf0/index.json) in the DOM is exposed as a function when requiring `preact-hyperscript`.
+
+```js
+const { div, h1, p, button } = require('preact-hyperscript')
+```
+
+These functions have the following syntax:
+
+```js
+tag(selector, attributes, children)
+```
+
+All arguments are **optional** with at least **one argument needing to be present**. This kind of function overloading allows you to iterate on your DOM structure really fast and reduce visual noise.
+
+* **selector** can be a class (prefixed with `.`) or an `id` (prefixed with a `#`). These can be mixed as you might expect: `.title#id.pad.red`
+* **attributes** is an object of dom attributes: `{ href: '#header' }`
+* **children** can be a string for a text node or an array of nodes
+
 ## Tests
 
 ```bash
