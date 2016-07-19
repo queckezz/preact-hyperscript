@@ -23,7 +23,7 @@
   "author": "queckezz <fabian.eichenberger@gmail.com>",
   "dependencies": {
     "hyperscript-helpers": "^3.0.0",
-    "parse-hyperscript": "^0.2.0"
+    "parse-hyperscript": "^0.3.0"
   },
   "peerDependencies": {
     "preact": "*"
