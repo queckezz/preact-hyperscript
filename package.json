@@ -1,7 +1,7 @@
 {
   "name": "preact-hyperscript",
   "version": "0.3.0",
-  "description": "Use hyperscript to create preact virtual dom elements",
+  "description": "Hyperscript-like syntax for creating Preact elements",
   "main": "lib/index.js",
   "scripts": {
     "test:node": "tape test/*.js | tap-spec",

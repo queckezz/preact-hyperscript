@@ -1,7 +1,7 @@
 
 # preact-hyperscript
 
-> Use hyperscript to create preact virtual dom elements
+> Hyperscript-like syntax for creating Preact elements.
 
 [![Build status][travis-image]][travis-url]
 [![NPM version][version-image]][version-url]
@@ -12,22 +12,25 @@
 ## Installation
 
 ```bash
-npm install preact-hyperscript
+> npm install preact-hyperscript
 ```
 
 ## Example
+
+<small>[→ Try this example on Codepen.io!](http://codepen.io/queckezz/pen/XKkEyj?editors=1010)</small>
 
 ```js
 const h = require('preact-hyperscript')
 const { render } = require('preact')
 
-const { h1, h2, button, ul } = h
+const { div, h1, h2, h3, button, ul, li } = h
 
 const App = ({ library }) => div([
   h1('.bold', library),
   h2('#subtitle', 'Preact is a fast, 3kb alternative to React, with the same ES2015 API'),
   button({ href: 'http://ghub.io/preact' }, 'Learn More'),
-  ul(['react', 'small', 'es2015'].map(key => li(key)))
+  h3('Features'),
+  ul(['preact', 'small', 'es2015', 'fast'].map(key => li(key)))
 ])
 
 render(
@@ -39,7 +42,7 @@ render(
 ## Tests
 
 ```bash
-npm test
+> npm test
 ```
 
 ## License
