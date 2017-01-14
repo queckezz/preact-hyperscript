@@ -29,7 +29,7 @@ function decorate (val, name) {
     case 'class':
       return classNames(val)
     case 'style':
-      return val !== 'string'
+      return typeof val !== 'string'
         ? toInlineStyle(val)
         : val
     default:
